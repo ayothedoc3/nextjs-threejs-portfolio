@@ -1,27 +1,28 @@
-// components/ThreeScene.jsx
 'use client';
 
 import { Suspense, useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, useGLTF, Environment, ContactShadows, Float } from '@react-three/drei';
+import { OrbitControls, Environment, ContactShadows, Float } from '@react-three/drei';
 
 function Model(props) {
-  // We'll use a simple custom geometry instead of loading a model
+  // We'll use a simple custom geometry
   const mesh = useRef();
   const [hovered, setHovered] = useState(false);
   
   useFrame((state) => {
-    mesh.current.rotation.y = state.clock.getElapsedTime() * 0.2;
+    if (mesh.current) {
+      mesh.current.rotation.y = state.clock.getElapsedTime() * 0.2;
+    }
   });
   
   const handlePointerOver = () => {
     setHovered(true);
-    document.body.style.cursor = 'pointer';
+    if (document?.body) document.body.style.cursor = 'pointer';
   };
   
   const handlePointerOut = () => {
     setHovered(false);
-    document.body.style.cursor = 'auto';
+    if (document?.body) document.body.style.cursor = 'auto';
   };
   
   const handleClick = () => {
@@ -82,10 +83,6 @@ export default function ThreeScene({ onInteraction }) {
             enableZoom={false}
             minPolarAngle={Math.PI / 3}
             maxPolarAngle={Math.PI / 1.5}
-            addEventListener={undefined}
-            hasEventListener={undefined}
-            removeEventListener={undefined}
-            dispatchEvent={undefined}
           />
         </Suspense>
       </Canvas>

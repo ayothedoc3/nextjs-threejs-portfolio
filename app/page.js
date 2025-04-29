@@ -1,4 +1,3 @@
-// app/page.js
 'use client';
 
 import { useState } from 'react';
@@ -35,9 +34,11 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
       <Header />
       
-      <div className="relative h-[70vh] w-full">
-        <ThreeScene onInteraction={handleInteraction} />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
+      <div id="home" className="relative h-screen w-full flex items-center justify-center">
+        <div className="absolute inset-0">
+          <ThreeScene onInteraction={handleInteraction} />
+        </div>
+        <div className="text-center z-10 pointer-events-none">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
             Ayokunle Ademola-John
           </h1>
@@ -51,7 +52,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="max-w-6xl mx-auto px-4 py-16">
+      <section id="projects" className="max-w-6xl mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
@@ -60,7 +61,7 @@ export default function Home() {
         </div>
       </section>
       
-      <section className="max-w-4xl mx-auto px-4 py-16 text-center">
+      <section id="skills" className="max-w-4xl mx-auto px-4 py-16 text-center">
         <h2 className="text-3xl font-bold mb-6">Technical Expertise</h2>
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {["Next.js", "Nest.js", "Tailwind CSS", "Three.js", "React Three Fiber", "TypeScript", "MongoDB", "PostgreSQL"].map((tech, index) => (
@@ -73,8 +74,15 @@ export default function Home() {
           Specialized in creating immersive web experiences with Next.js and Three.js,
           backed by robust Nest.js APIs and elegant Tailwind CSS designs.
         </p>
+      </section>
+      
+      <section id="contact" className="max-w-4xl mx-auto px-4 py-16 text-center">
+        <h2 className="text-3xl font-bold mb-6">Let's Connect</h2>
+        <p className="text-lg mb-8">
+          Interested in working together? I'm available for freelance projects and full-time opportunities.
+        </p>
         <a 
-          href="#contact" 
+          href="mailto:contact@ayokunleaj.dev" 
           className="inline-block px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-medium hover:opacity-90 transition"
         >
           Let's Work Together
