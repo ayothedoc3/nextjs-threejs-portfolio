@@ -1,118 +1,86 @@
-# Next.js + Three.js Portfolio Demo
+# Next.js + Three.js Portfolio
 
-## Overview
-
-This project demonstrates expertise in Next.js, Three.js, and React Three Fiber, created as a showcase for potential clients. It features an interactive 3D scene integrated with a modern web portfolio.
-
-![Portfolio Demo Screenshot](https://via.placeholder.com/800x400)
+A modern portfolio website built with Next.js and Three.js for 3D interactive elements.
 
 ## Features
 
-- **Interactive 3D Scene**: Built with Three.js and React Three Fiber
-- **Modern UI**: Clean design using Tailwind CSS
-- **Responsive Layout**: Looks great on all device sizes
-- **Project Showcase**: Sample 3D projects with descriptions
-- **Performance Optimized**: Efficient rendering of 3D elements
+- Responsive design
+- Interactive 3D scenes using Three.js
+- Smooth animations
+- Project showcase section
+- Modern UI with Tailwind CSS
 
 ## Technologies Used
 
-- [Next.js](https://nextjs.org/) - React framework for building web applications
-- [Three.js](https://threejs.org/) - 3D graphics library for the web
-- [React Three Fiber](https://github.com/pmndrs/react-three-fiber) - React renderer for Three.js
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [@react-three/drei](https://github.com/pmndrs/drei) - Useful helpers for React Three Fiber
-
-## Live Demo
-
-Visit the live demo: [https://your-portfolio-demo.vercel.app](https://your-portfolio-demo.vercel.app)
+- Next.js (React framework)
+- Three.js (3D graphics)
+- Tailwind CSS (styling)
+- Framer Motion (animations)
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 14.6.0 or newer
-- npm or yarn
+- Node.js (v18 or higher)
+- npm (v9 or higher)
 
 ### Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/nextjs-threejs-portfolio.git
-cd nextjs-threejs-portfolio
-```
-
+1. Clone the repository
 2. Install dependencies:
 ```bash
 npm install
-# or
-yarn install
 ```
 
 3. Run the development server:
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ## Project Structure
 
+Key files and directories:
+
+- `app/` - Next.js app router pages and layout
+- `components/` - React components
+  - `ThreeScene.jsx` - Main 3D scene component
+  - `ProjectCard.jsx` - Project display cards
+- `public/` - Static assets
+- `stores/` - State management
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
+
+## GitHub Repository
+
+The project is hosted on GitHub. Here's how to work with it:
+
+### Cloning the Repository
+```bash
+git clone https://github.com/your-username/nextjs-threejs-portfolio.git
+cd nextjs-threejs-portfolio
 ```
-/
-├── app/                # Next.js app directory
-│   ├── page.js         # Main page component
-│   ├── layout.js       # Root layout
-│   └── globals.css     # Global styles
-├── components/         # React components
-│   ├── ThreeScene.jsx  # 3D scene component
-│   ├── Header.jsx      # Header component
-│   └── ProjectCard.jsx # Project card component
-├── public/             # Static assets
-└── package.json        # Project dependencies
-```
 
-## Customizing the Project
+### Contributing
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### Modifying the 3D Scene
-
-The 3D scene is contained in `components/ThreeScene.jsx`. You can:
-
-- Replace the geometric shapes with custom 3D models
-- Change materials, colors, and lighting
-- Add animations and interactions
-- Implement custom shaders
-
-### Adding Your Projects
-
-Edit the projects array in `app/page.js` to showcase your own work:
-
-```javascript
-const projects = [
-  {
-    title: "Your Project Title",
-    description: "Description of your project",
-    tags: ["Tag1", "Tag2", "Tag3"]
-  },
-  // Add more projects...
-];
-```
+### Issues
+Found a bug or have a feature request? Please open an issue on GitHub.
 
 ## Deployment
 
-This project is optimized for deployment on Vercel:
+This project can be deployed to Vercel with zero configuration.
 
-1. Push your code to a GitHub repository
-2. Import the repository on [Vercel](https://vercel.com)
-3. Deploy with default settings
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fhello-world)
 
-## License
-
-MIT
-
-## Contact
-
-Your Name - your.email@example.com
-
-Project Link: [https://github.com/yourusername/nextjs-threejs-portfolio](https://github.com/yourusername/nextjs-threejs-portfolio)
+[![GitHub stars](https://img.shields.io/github/stars/your-username/nextjs-threejs-portfolio?style=social)](https://github.com/your-username/nextjs-threejs-portfolio)
